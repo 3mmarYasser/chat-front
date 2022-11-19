@@ -15,6 +15,7 @@ const MessageInputChat :React.FC<Props> = ({toUser}) => {
         <>
             <input
                 type="text"
+                placeholder={"message..."}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyDown={(e)=>{
