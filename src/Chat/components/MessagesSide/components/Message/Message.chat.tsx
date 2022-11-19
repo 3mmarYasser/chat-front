@@ -5,12 +5,16 @@ interface Props{
     date:string
     msg:string
 }
-const ChatMessage :React.FC<Props> = ({msg,date,user}) => {
+const MessageChat :React.FC<Props> = ({msg,date,user}) => {
     return (
         <div className="flex mx-6 my-3 py-4">
-            <div className="flex-none"><a href="#">
-                <img draggable={false} onContextMenu={ev=>ev.preventDefault()} src={user.avatar} alt="UserAvatar"
-                     className="w-10 h-10 rounded-full"/></a>
+            <div className="flex-none">
+                <Link to="#" >
+                    <img draggable={false}
+                         onContextMenu={ev=>ev.preventDefault()}
+                         src={user.avatar} alt="UserAvatar"
+                         className="w-10 h-10 rounded-full"/>
+                </Link>
             </div>
 
             <div className="ml-5">
@@ -28,4 +32,4 @@ const ChatMessage :React.FC<Props> = ({msg,date,user}) => {
     );
 };
 
-export default ChatMessage ;
+export default MessageChat ;

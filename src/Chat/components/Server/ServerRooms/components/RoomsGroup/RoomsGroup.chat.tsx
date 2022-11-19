@@ -4,12 +4,12 @@ interface Props{
     title:string,
     open?:boolean
 }
-const ChatRoomsGroup :React.FC<Props> = ({children,title,open=true}) => {
+const RoomsGroupChat :React.FC<Props> = ({children,title,open=true}) => {
     const [checked,setChecked] =useState(open)
     return (
         <>
             <div tabIndex={0} className="collapse  collapse-arrow mt-2">
-                <input type="checkbox" className="peer" checked={checked} onInput={()=>{
+                <input type="checkbox" className="peer" checked={checked} onChange={()=>{
                     setChecked(!checked)
                 }} />
                 <div className="collapse-title collapse-chat-extend ">
@@ -23,4 +23,4 @@ const ChatRoomsGroup :React.FC<Props> = ({children,title,open=true}) => {
     );
 };
 
-export default ChatRoomsGroup ;
+export default RoomsGroupChat ;

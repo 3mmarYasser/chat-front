@@ -4,7 +4,7 @@ interface Props{
     title:string,
     href:string
 }
-const ChatServerRoom :React.FC<Props> = ({title,href}) => {
+const ServerRoomChat :React.FC<Props> = ({title,href}) => {
     return (
         <li className="text-base-content px-2 text-opacity-50 hover:text-opacity-100 hover:bg-base-200">
             <Link to={href} className="flex items-center">
@@ -14,4 +14,4 @@ const ChatServerRoom :React.FC<Props> = ({title,href}) => {
     );
 };
 
-export default ChatServerRoom ;
+export default ServerRoomChat ;

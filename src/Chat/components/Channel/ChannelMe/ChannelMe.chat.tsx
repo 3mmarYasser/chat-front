@@ -3,7 +3,7 @@ import {BiHomeAlt} from "react-icons/all";
 interface Props{
 
 }
-const ChatChannelMe :React.FC<Props> = () => {
+const ChannelMeChat :React.FC<Props> = () => {
     return (
         <div className="bg-base-100 w-56 flex-none flex flex-col justify-between">
             <div className="hashtag-bar text-sm leading-relaxed overflow-y-auto">
@@ -33,4 +33,4 @@ const ChatChannelMe :React.FC<Props> = () => {
     );
 };
 
-export default ChatChannelMe ;
+export default ChannelMeChat ;

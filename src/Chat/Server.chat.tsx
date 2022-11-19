@@ -1,8 +1,8 @@
 import React from 'react';
-import ChatServerHeader from "./components/Server/ChatServerHeader/ChatHeader";
-import ChatServerRooms from "./components/Server/ChatServerRooms/ChatServerRooms";
-import ChatMessagesSide from "./components/ChatMessagesSide/ChatMessagesSide";
-import ChatServerUsers from "./components/Server/ChatServerUsers/ChatServerUsers";
+import ChatServerHeader from "./components/Server/ServerHeader/Header.chat";
+import ServerRoomsChat from "./components/Server/ServerRooms/ServerRooms.chat";
+import MessagesSideChat from "./components/MessagesSide/MessagesSide.chat";
+import ServerUsersChat from "./components/Server/ServerUsers/ServerUsers.chat";
 interface Props{
     
 }
@@ -11,10 +11,10 @@ const ChatServer :React.FC<Props> = () => {
         <>
             <ChatServerHeader/>
             <div className="flex-1 flex overflow-y-hidden">
-                <ChatServerRooms/>
+                <ServerRoomsChat/>
                 <div className="flex-1 flex justify-between">
-                    <ChatMessagesSide/>
-                    <ChatServerUsers/>
+                    <MessagesSideChat/>
+                    <ServerUsersChat/>
                 </div>
             </div>
         </>

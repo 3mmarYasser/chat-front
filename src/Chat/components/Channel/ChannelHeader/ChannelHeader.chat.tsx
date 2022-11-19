@@ -3,7 +3,7 @@ import {AiFillNotification, BsPin} from "react-icons/all";
 interface Props{
     
 }
-const ChatChannelHeader :React.FC<Props> = () => {
+const ChannelHeaderChat :React.FC<Props> = () => {
     return (
         <div className="flex text-base-content h-12">
             <div className="bg-base-100 w-56 flex-none flex items-center justify-between border-b border-base-content border-opacity-20 px-1 py-2 relative">
@@ -53,4 +53,4 @@ const ChatChannelHeader :React.FC<Props> = () => {
     );
 };
 
-export default ChatChannelHeader ;
+export default ChannelHeaderChat ;

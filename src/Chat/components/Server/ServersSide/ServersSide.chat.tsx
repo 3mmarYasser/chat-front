@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 interface Props{
 
 }
-const ChatServersSide :React.FC<Props> = () => {
+const ServersSideChat :React.FC<Props> = () => {
     return (
         <div className=" bg-base-300 w-20 flex-none flex flex-col h-full px-2 py-2">
             <div className="h-full overflow-y-auto">
@@ -47,4 +47,4 @@ const ChatServersSide :React.FC<Props> = () => {
     );
 };
 
-export default ChatServersSide ;
+export default ServersSideChat ;

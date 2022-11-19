@@ -1,19 +1,17 @@
 import React from 'react';
-import ChatMessage from "./components/ChatMessage/ChatMessage";
+import MessageChat from "./components/Message/Message.chat";
 import {AiOutlineGif, BsFillEmojiSunglassesFill, MdAddCircle} from "react-icons/all";
-import MessageInput from "./components/MessageInput/MessageInput";
+import MessageInputChat from "./components/MessageInput/MessageInput.chat";
+import MessagesChat from "./components/Messages/Messages.chat";
 interface Props{
     
 }
-const ChatMessagesSide :React.FC<Props> = () => {
+const MessagesSideChat :React.FC<Props> = () => {
     return (
         <div className="bg-base-300 flex-1 flex flex-col ">
 
             <div className="text-sm text-base-content text-opacity-60 overflow-y-auto h-full">
-                <ChatMessage msg={"Hello"} date={"2022/9/9"} user={{userName:"User Name" , avatar:"https://img.icons8.com/officel/2x/avatar.png"}}/>
-                <ChatMessage msg={"Hi Pro"} date={"2022/9/9"} user={{userName:"My Name" , avatar:"https://img.icons8.com/external-linector-lineal-color-linector/2x/external-avatar-man-avatar-linector-lineal-color-linector.png"}}/>
-                <ChatMessage msg={"how are you"} date={"2022/9/9"} user={{userName:"User Name" , avatar:"https://img.icons8.com/officel/2x/avatar.png"}}/>
-                <ChatMessage msg={"Never Been better"} date={"2022/9/9"} user={{userName:"My Name" , avatar:"https://img.icons8.com/external-linector-lineal-color-linector/2x/external-avatar-man-avatar-linector-lineal-color-linector.png"}}/>
+                <MessagesChat chatId={"123"}/>
             </div>
 
             <div className="h-24 flex items-center mx-3 border-t border-base-content border-opacity-40">
@@ -23,7 +21,7 @@ const ChatMessagesSide :React.FC<Props> = () => {
                 </button>
 
                 <div className="flex-1">
-                    <MessageInput toUser={"Ammar"}/>
+                    <MessageInputChat toUser={"Ammar"}/>
                 </div>
 
                 <div className="px-2 py-2 bg-base-200   bg-opacity-75 rounded-r flex items-center h-10">
@@ -42,4 +40,4 @@ const ChatMessagesSide :React.FC<Props> = () => {
     );
 };
 
-export default ChatMessagesSide ;
+export default MessagesSideChat ;

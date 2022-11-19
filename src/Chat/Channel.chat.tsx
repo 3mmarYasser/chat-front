@@ -1,7 +1,7 @@
 import React from 'react';
-import ChatMessagesSide from "./components/ChatMessagesSide/ChatMessagesSide";
-import ChatChannelMe from "./components/Channel/ChatChannelMe/ChatChannelMe";
-import ChatChannelHeader from "./components/Channel/ChatChannelHeader/ChatChannelHeader";
+import MessagesSideChat from "./components/MessagesSide/MessagesSide.chat";
+import ChannelMeChat from "./components/Channel/ChannelMe/ChannelMe.chat";
+import ChannelHeaderChat from "./components/Channel/ChannelHeader/ChannelHeader.chat";
 interface Props{
     
 }
@@ -9,10 +9,10 @@ const ChatChannel :React.FC<Props> = () => {
     return (
         <>
 
-            <ChatChannelHeader/>
+            <ChannelHeaderChat/>
             <div className="flex-1 flex overflow-y-hidden">
-                <ChatChannelMe/>
-                <ChatMessagesSide/>
+                <ChannelMeChat/>
+                <MessagesSideChat/>
             </div>
         </>
     );

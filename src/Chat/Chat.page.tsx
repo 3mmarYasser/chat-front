@@ -1,6 +1,6 @@
 import React,{useState , useEffect} from 'react';
 import io from 'socket.io-client';
-import ChatServersSide from "./components/Server/ChatServersSide/ChatServersSide";
+import ServersSideChat from "./components/Server/ServersSide/ServersSide.chat";
 import {Outlet} from "react-router-dom";
 
 const Chat :React.FC = () => {
@@ -9,7 +9,7 @@ const Chat :React.FC = () => {
         <>
             <div className="relative" dir={"ltr"}>
                 <div className={"flex w-full h-screen bg-base-300"}>
-                    <ChatServersSide/>
+                    <ServersSideChat/>
                     <div className="flex-1 flex flex-col  h-full max-h-full">
                         <Outlet/>
                     </div>
