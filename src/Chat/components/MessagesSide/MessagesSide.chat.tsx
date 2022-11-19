@@ -1,5 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
-import MessageChat from "./components/Message/Message.chat";
+import React, {useEffect, useRef} from 'react';
 import {AiOutlineGif, BsFillEmojiSunglassesFill, MdAddCircle} from "react-icons/all";
 import MessageInputChat from "./components/MessageInput/MessageInput.chat";
 import MessagesChat from "./components/Messages/Messages.chat";
@@ -7,12 +6,13 @@ interface Props{
     
 }
 const MessagesSideChat :React.FC<Props> = () => {
-    const messageEl = useRef<any>(null);
+    const messageEl = useRef<HTMLDivElement |null>(null);
 
     useEffect(() => {
-        if (messageEl) {
+        if (messageEl.current) {
             messageEl.current.addEventListener('DOMNodeInserted', (event:any) => {
                 event.target.scroll({ top: event.target.scrollHeight, behavior: 'smooth' });
+                console.log(event)
             });
         }
     }, [])
