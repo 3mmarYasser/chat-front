@@ -22,7 +22,7 @@ export const SocketProvider = ({children}: IProps) => {
 
     const dispatch = useDispatch()
 
-    socket = socketIOClient("http://192.168.1.2:3000/chat");
+    socket = socketIOClient("http://api.royal-manga.com/");
 
     socket.on("connect", () => {
         console.log("Connected");
