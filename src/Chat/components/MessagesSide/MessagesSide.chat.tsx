@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import MessageChat from "./components/Message/Message.chat";
 import {AiOutlineGif, BsFillEmojiSunglassesFill, MdAddCircle} from "react-icons/all";
 import MessageInputChat from "./components/MessageInput/MessageInput.chat";
@@ -7,6 +7,14 @@ interface Props{
     
 }
 const MessagesSideChat :React.FC<Props> = () => {
+    const autoScroll = React.useRef<HTMLDivElement>();
+    useEffect(() => {
+        if (autoScroll.current) {
+            autoScroll.current.scrollTop = autoScroll.current.scrollHeight;
+        }
+    }, [autoScroll]);
+
+
     return (
         <div className="bg-base-300 flex-1 flex flex-col ">
 
