@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import MessageChat from "./components/Message/Message.chat";
 import {AiOutlineGif, BsFillEmojiSunglassesFill, MdAddCircle} from "react-icons/all";
 import MessageInputChat from "./components/MessageInput/MessageInput.chat";
@@ -7,19 +7,20 @@ interface Props{
     
 }
 const MessagesSideChat :React.FC<Props> = () => {
-    const autoScroll = React.useRef<HTMLDivElement|null>(null);
-    useEffect(() => {
-        if (autoScroll.current) {
-            autoScroll.current.scrollTop = autoScroll.current.scrollHeight;
-            console.log("Run")
-        }
-    }, [autoScroll]);
+    const messageEl = useRef<any>(null);
 
+    useEffect(() => {
+        if (messageEl) {
+            messageEl.current.addEventListener('DOMNodeInserted', (event:any) => {
+                event.target.scroll({ top: event.target.scrollHeight, behavior: 'smooth' });
+            });
+        }
+    }, [])
 
     return (
         <div className="bg-base-300 flex-1 flex flex-col ">
 
-            <div ref={autoScroll} className="text-sm text-base-content text-opacity-60 overflow-y-auto h-full">
+            <div ref={messageEl} className="text-sm text-base-content text-opacity-60 overflow-y-auto h-full">
                 <MessagesChat chatId={"123"}/>
             </div>
 
