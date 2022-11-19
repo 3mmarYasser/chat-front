@@ -19,7 +19,7 @@ const MessagesSideChat :React.FC<Props> = () => {
     return (
         <div className="bg-base-300 flex-1 flex flex-col ">
 
-            <div ref={messageEl} className="text-sm text-base-content/60 overflow-y-auto h-full">
+            <div ref={messageEl} className="text-sm text-base-content/60 overflow-y-auto h-full hidden-scrollbar">
                 <MessagesChat chatId={"123"}/>
             </div>
 
