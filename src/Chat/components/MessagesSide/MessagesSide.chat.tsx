@@ -10,6 +10,7 @@ const MessagesSideChat :React.FC<Props> = () => {
 
     useEffect(() => {
         if (messageEl.current) {
+            messageEl.current.scrollTo({ top: messageEl.current.scrollHeight, behavior: 'smooth' });
             messageEl.current.addEventListener('DOMNodeInserted', (event:any) => {
                 event.target.scrollIntoView({ top: event.target.scrollHeight, behavior: 'smooth' });
             });
