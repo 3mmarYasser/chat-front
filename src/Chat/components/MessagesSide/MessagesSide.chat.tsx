@@ -11,8 +11,7 @@ const MessagesSideChat :React.FC<Props> = () => {
     useEffect(() => {
         if (messageEl.current) {
             messageEl.current.addEventListener('DOMNodeInserted', (event:any) => {
-                event.target.scroll({ top: event.target.scrollHeight, behavior: 'smooth' });
-                console.log(event)
+                event.target.scrollIntoView({ top: event.target.scrollHeight, behavior: 'smooth' });
             });
         }
     }, [])
@@ -20,7 +19,7 @@ const MessagesSideChat :React.FC<Props> = () => {
     return (
         <div className="bg-base-300 flex-1 flex flex-col ">
 
-            <div ref={messageEl} className="text-sm text-base-content text-opacity-60 overflow-y-auto h-full">
+            <div ref={messageEl} className="text-sm text-base-content/60 overflow-y-auto h-full">
                 <MessagesChat chatId={"123"}/>
             </div>
 
