@@ -7,10 +7,11 @@ interface Props{
     
 }
 const MessagesSideChat :React.FC<Props> = () => {
-    const autoScroll = React.useRef<HTMLDivElement>();
+    const autoScroll = React.useRef<HTMLDivElement|null>(null);
     useEffect(() => {
         if (autoScroll.current) {
             autoScroll.current.scrollTop = autoScroll.current.scrollHeight;
+            console.log("Run")
         }
     }, [autoScroll]);
 
@@ -18,7 +19,7 @@ const MessagesSideChat :React.FC<Props> = () => {
     return (
         <div className="bg-base-300 flex-1 flex flex-col ">
 
-            <div className="text-sm text-base-content text-opacity-60 overflow-y-auto h-full">
+            <div ref={autoScroll} className="text-sm text-base-content text-opacity-60 overflow-y-auto h-full">
                 <MessagesChat chatId={"123"}/>
             </div>
 
